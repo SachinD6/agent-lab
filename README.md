@@ -9,14 +9,14 @@ This starter provides you with a general-purpose Mastra agent that can research 
 - A local `workspace/` for files and command execution (created under `src/mastra/public/workspace/` when running `mastra dev`)
 - Approval gates for file changes, deletions, and shell commands
 - Conversation memory, generated thread titles, and task tracking
-- Built-in web search and direct web page fetching
+- Direct web page fetching (`web_search` is disabled: Google Search grounding returns 429 on this API key)
 - Recurring schedules that persist across restarts
 - Local libSQL storage and DuckDB observability, with optional Turso storage
 - A bundled Mastra skill that helps coding agents use current Mastra APIs
 
 ## Get started
 
-Set your `XAI_API_KEY` in `.env` or in your environment, then run:
+Set your `GOOGLE_GENERATIVE_AI_API_KEY` in `.env` or in your environment, then run:
 
 ```shell
 npm run dev
@@ -26,9 +26,8 @@ Open [http://localhost:4111](http://localhost:4111) in your browser to access [M
 
 Select **Agent** in Mastra Studio and try one of these prompts:
 
-- `Get the weather forecast for Austin this weekend.`
 - `Create a landing page for a Japanese sakura festival.`
-- `Check the SPCX stock price now, then check it every minute.`
+- `What files are in your workspace?`
 
 The agent asks for approval before it changes files or runs commands. When it creates a schedule, it returns an ID that you can use to pause the schedule.
 
