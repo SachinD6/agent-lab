@@ -10,6 +10,7 @@ This starter provides you with a general-purpose Mastra agent that can research 
 - Approval gates for file changes, deletions, and shell commands
 - Conversation memory, generated thread titles, and task tracking
 - Direct web page fetching (`web_search` is disabled: Google Search grounding returns 429 on this API key)
+- GitHub repository search via the GitHub REST API
 - Recurring schedules that persist across restarts
 - Local libSQL storage and DuckDB observability, with optional Turso storage
 - A bundled Mastra skill that helps coding agents use current Mastra APIs

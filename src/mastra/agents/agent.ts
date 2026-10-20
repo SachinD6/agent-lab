@@ -4,6 +4,7 @@ import { TaskSignalProvider } from '@mastra/core/signals';
 import { askUserTool, webFetchTool } from '@mastra/core/tools';
 import { LocalFilesystem, LocalSandbox, WORKSPACE_TOOLS, Workspace } from '@mastra/core/workspace';
 import { Memory } from '@mastra/memory';
+import { githubSearchTool } from '../tools/github-search';
 import { startScheduleTool, stopScheduleTool } from '../tools/schedule-tools';
 
 const workspacePath = 'workspace';
@@ -69,6 +70,7 @@ For local file changes, end with a plain-text URL using ${pathToFileURL(`${works
   workspace,
   tools: {
     ask_user: askUserTool,
+    github_search: githubSearchTool,
     start_schedule: startScheduleTool,
     stop_schedule: stopScheduleTool,
     web_fetch: webFetchTool,
