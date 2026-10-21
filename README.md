@@ -32,6 +32,14 @@ Select **Agent** in Mastra Studio and try one of these prompts:
 
 The agent asks for approval before it changes files or runs commands. When it creates a schedule, it returns an ID that you can use to pause the schedule.
 
+## Trace server
+
+The Go server in `server/` accepts `POST /traces` on port `8090` and prints each request body.
+
+```shell
+cd server && go run .
+```
+
 ## Workspace safety
 
 The local filesystem tools stay inside the `workspace/` directory, which resolves relative to the server's working directory (`src/mastra/public/workspace/` during `mastra dev`). Shell commands start in that directory, but `LocalSandbox` does not provide operating-system isolation by default. Review command approvals carefully, and do not expose this template through an unauthenticated public server.
