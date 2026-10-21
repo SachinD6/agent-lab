@@ -15,3 +15,6 @@ src/mastra/public/
 
 # Go
 server/server
+
+# Trace output
+traces.json

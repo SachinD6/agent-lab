@@ -34,7 +34,7 @@ The agent asks for approval before it changes files or runs commands. When it cr
 
 ## Trace server
 
-The Go server in `server/` accepts `POST /traces` on port `8090` and prints each request body.
+The Go server in `server/` accepts `POST /traces` on port `8090`, prints each request body, and appends it as one JSON line to `server/traces.json`. The agent posts one trace record after every run; if the server is down, the run still completes.
 
 ```shell
 cd server && go run .
