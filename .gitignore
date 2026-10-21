@@ -12,3 +12,6 @@ src/mastra/public/
 .vercel
 *.duckdb
 *.duckdb.wal
+
+# Go
+server/server
