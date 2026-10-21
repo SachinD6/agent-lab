@@ -1,7 +1,7 @@
 {
   "name": "agent-lab",
   "version": "1.0.0",
-  "description": "A general-purpose Mastra agent with a local workspace, shell tools, memory, task tracking, web access, and recurring schedules.",
+  "description": "A Mastra agent with GitHub search, a Go trace server, and five evals.",
   "main": "index.js",
   "private": true,
   "scripts": {
